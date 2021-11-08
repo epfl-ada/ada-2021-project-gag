@@ -1,0 +1,7 @@
+.ipynb_checkpoints
+
+out*
+quotebank
+
+*.csv
+*.json
