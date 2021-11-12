@@ -1,4 +1,4 @@
-# Politics in sport media
+# Influence of politics in sport media
  
 # Abstract : 
 The goal of this project is to assess the link between politics and sport media. It is well known that media and politics are very closely linked and that certain media have a clear inclination towards certain parties. Politicians use the media as a tool to make their popularity grow. However certain media focus on subjects which are unrelated to politics, like sport. But are they really not influenced by politics and politicians ? Indeed, it might offer an interesting opportunity for politicians to reach a new public and discreetly increase their popularity among them. The idea is therefore to study to what extent this phenomenon is present according to certain criteria such as the media, the sport, the country or over time. Also, if a political current, a party, a politician or a country in particular are more present than others in the sports media. 
@@ -73,7 +73,5 @@ Until now the goal was to verify if this analysis is feasible by exploring the d
 
 **Party_distribution :**  Import data from speaker_attributes.parquet. For each year, extract politicians which are speakers of sport quotes and their political parties. First analysis of the distribution of sport quotes over political parties. 
 
-# Question for TA : 
-We have tried to stay very broad in the questions that we could ask ourselves, but we may have cited too many or some may be too difficult. Even though we have a pretty clear idea of what we want to do and how we want to do it, we though it was more interesting to put a bit more here so that you can give your feedback on all our ideas before we discard some. So we would like your opinion on which are the most interesting aspects to deal with.
-
-In addition, we have plenty of ideas to improve the methods or the analysis. Our approach is a bit incremental : we first want to extract the most important information and perform the main analysis and add more if it ended up being to easy/fast. An indication on what you think is reasonable or not, or too easy would be great.
+# Questions for TAs : 
+We tried to stay very broad in the questions that we could ask ourselves, but we may have cited too many or some may be too difficult. Even though we have a pretty clear idea of what we want to do and how we want to do it, we though it was more interesting to put a bit more here so that you can give your feedback on all our ideas before we discard some. So we would like your opinion on which are the most interesting aspects to deal with.
