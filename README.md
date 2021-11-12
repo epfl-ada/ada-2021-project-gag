@@ -63,11 +63,11 @@ Until now the goal was to verify if this analysis is feasible by exploring the d
 *10 Dec to 17 Dec :* Clean up and standardize the code + finish the datastory
 
 # Notebooks description :
-**Notebook1 :** Imports data from the Quotebank and extracts quotes from sport media and sports sections of more general media
+**sports_quotes :** Imports data from the Quotebank and extracts quotes from sport media and sports sections of more general media
 
-**Notebook2 :** Analysis of the distribution of the media publishing sports quotes.
+**Sources :** Analysis of the distribution of the media publishing sports quotes.
 
-**Notebook3 to ... :**  Import data from speaker_attributes.parquet. For each year, extract politicians which are speakers of sport quotes and their political parties. First analysis of the distribution of sport quotes over political parties. 
+**Party_distribution :**  Import data from speaker_attributes.parquet. For each year, extract politicians which are speakers of sport quotes and their political parties. First analysis of the distribution of sport quotes over political parties. 
 
 # Question for TA : 
 We have tried to see very broad in the questions that we could ask ourselves, but we may have cited too many or some may be too difficult. So we would like an opinion on which are the most interesting aspects to deal with.
