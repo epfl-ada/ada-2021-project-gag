@@ -1,7 +1,7 @@
 # Influence of politics in sport media
  
 # Abstract : 
-The goal of this project is to assess the link between politics and sport media. It is well known that media and politics are very closely linked and that certain media have a clear inclination towards certain parties. Politicians use the media as a tool to make their popularity grow. However certain media focus on subjects which are unrelated to politics, like sport. But are they really not influenced by politics and politicians ? Indeed, it might offer an interesting opportunity for politicians to reach a new public and discreetly increase their popularity among them. The idea is therefore to study to what extent this phenomenon is present according to certain criteria such as the media, the sport, the country or over time. Also, if a political current, a party, a politician or a country in particular are more present than others in the sports media. 
+The goal of this project is to assess the link between politics and sport media. It is well known that media and politics are very closely linked and that certain media have a clear inclination towards certain parties. Politicians use the media as a tool to make their popularity grow. However certain media focus on subjects which are unrelated to politics, like sport. But are they really not influenced by politics and politicians ? Indeed, it might offer an interesting opportunity for politicians to reach a new public and discreetly increase their popularity among them. The idea is therefore to study to what extent this phenomenon is present according to certain criteria such as the media, the sport, the country or over time. Also, if a political current, a party, a politician or a country in particular is more present than others in the sports media. 
 
 # Research questions : 
 To explore this subject the following questions can be assessed : 
@@ -13,8 +13,9 @@ To explore this subject the following questions can be assessed :
 
 # Additional datasets : 
 To answer those questions, additional dataset are necessary or could be useful. The following list shows what additional dataset are interesting in this study :
-Additional metadata about the speakers in the Quotebank dataset provided in the file named speaker_attributes.parquet 
-Extra data from Wikidata : Periods of membership in each party if a person is assigned to more than one party + Description of each party, political orientation + country of each media
+- Additional metadata about the speakers in the Quotebank dataset provided in the file named speaker_attributes.parquet 
+- Extra data from Wikidata : Periods of membership in each party if a person is assigned to more than one party + Description of each party, political orientation + country of each media
+
 These two types of data have already been handled in this second Milestone, showing that we are capable of handling it, in terms of size and in terms of finding the data.
 
 # Methods : 
