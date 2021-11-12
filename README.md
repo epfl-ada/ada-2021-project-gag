@@ -7,11 +7,9 @@ The goal of this project is to assess the link between politics and sport media.
 To explore this subject the following questions can be assessed : 
 - How much of the sport quotes among each media is politics related? 
 - How does this phenomenon evolve over time? For instance, does it increase before elections ? 
-- In which sports, teams or which specific players is this phenomenon more present? 
 - Which political parties or politicians are the most present in the sports quotes?  
 - What is the distribution of the political tendency of the political parties present in the sports quotes (going from extreme right to extreme left)? 
 - What is the distribution of the political parties present for a specific country? 
-- How do the readers want to be influenced ?
 
 # Additional datasets : 
 To answer those questions, additional dataset are necessary or could be useful. The following list shows what additional dataset are interesting in this study :
@@ -54,13 +52,19 @@ Until now the goal was to verify if this analysis is feasible by exploring the d
 
 *5 Nov to 12 Nov :* 
 - Data processing 1 and 2 : Etienne and Nicolas
-- Data processing 1 and 4 : Maxime and Francesca
+- Data processing 3 and 4 : Maxime and Francesca
 
-*12 Nov to 3 Dec :* Data preprocessing from task 5 and 6 + code to produce analysis data
+*12 Nov to 3 Dec :* 
+- Data processing 5 and 6 : Maxime and Francesca
+- Analysis 1, 2 and 3 : Etienne and Nicolas
 
-*3 Dec to 10 Dec :* Analysis data results interpretation + start the datastory 
+*3 Dec to 10 Dec :*
+- Data story and analysis : Etienne and Nicolas
+- Analysis 4 and 5 : Maxime and Francesca
 
-*10 Dec to 17 Dec :* Clean up and standardize the code + finish the datastory
+*10 Dec to 17 Dec :* 
+- Data story and analysis : Maxime and Francesca
+- Clean up, verifications, rereading : Etienne and Nicolas
 
 # Notebooks description :
 **sports_quotes :** Imports data from the Quotebank and extracts quotes from sport media and sports sections of more general media
@@ -70,4 +74,6 @@ Until now the goal was to verify if this analysis is feasible by exploring the d
 **Party_distribution :**  Import data from speaker_attributes.parquet. For each year, extract politicians which are speakers of sport quotes and their political parties. First analysis of the distribution of sport quotes over political parties. 
 
 # Question for TA : 
-We have tried to see very broad in the questions that we could ask ourselves, but we may have cited too many or some may be too difficult. So we would like an opinion on which are the most interesting aspects to deal with.
+We have tried to stay very broad in the questions that we could ask ourselves, but we may have cited too many or some may be too difficult. Even though we have a pretty clear idea of what we want to do and how we want to do it, we though it was more interesting to put a bit more here so that you can give your feedback on all our ideas before we discard some. So we would like your opinion on which are the most interesting aspects to deal with.
+
+In addition, we have plenty of ideas to improve the methods or the analysis. Our approach is a bit incremental : we first want to extract the most important information and perform the main analysis and add more if it ended up being to easy/fast. An indication on what you think is reasonable or not, or too easy would be great.
