@@ -71,7 +71,6 @@ class QueryManager:
             json_answer.prettyPrint()
             return {}
 
-        print(json_answer.json)
         entity = json_answer.json['entities'][qid]
 
         if pids is None:
@@ -176,17 +175,26 @@ class QueryManager:
         date_list = list(map(lambda x: int(x), date_str.split('-')))
         date = datetime.date(*date_list, 1)
 
-        for n in reversed(parties):
-            if n['mainsnak']['snaktype'] != 'novalue':
-                if 'P582' in n['qualifiers']:  # if there's a "end time" for the party membership
-                    end_date = wiki_date_to_time_date(n['qualifiers']['P582'][0]['datavalue']['value']['time'])
+        # first pass: try to see if we have parties that would tie with the date
+        for party in reversed(parties):
+            if party['mainsnak']['snaktype'] != 'novalue':
+                if 'qualifiers' not in party:
+                    continue
+
+                if 'P582' in party['qualifiers']:  # if there's a "end time" for the party membership
+                    end_date = wiki_date_to_time_date(party['qualifiers']['P582'][0]['datavalue']['value']['time'])
                     if date > end_date:
                         return ''
 
-                if 'P580' in n['qualifiers']:  # if there's a "start time" for the party membership
-                    start_date = wiki_date_to_time_date(n['qualifiers']['P580'][0]['datavalue']['value']['time'])
+                if 'P580' in party['qualifiers']:  # if there's a "start time" for the party membership
+                    start_date = wiki_date_to_time_date(party['qualifiers']['P580'][0]['datavalue']['value']['time'])
                     if date >= start_date:
-                        return n['mainsnak']['datavalue']['value']['id']
+                        return party['mainsnak']['datavalue']['value']['id']
+
+        # second pass: return the last known party, because wikidata decides to sometimes omit the "start_time" and "end_time"
+        for party in reversed(parties):
+            if party['mainsnak']['snaktype'] != 'novalue':
+                return party['mainsnak']['datavalue']['value']['id']
 
         return ''
 
@@ -198,17 +206,21 @@ class QueryManager:
 def main():
     manager = QueryManager()
 
-    v = manager.search_politician_party('Q22686')  # trump
-    print('v1 vaut : ', v)
+    for party in ["Republican Party", "Democratic Party"]:
+        res = manager.search_party_information(party)
+        print(f'Information for party \'{party}\': {res}')
 
-    v = manager.search_politician_party('Q22686', '2012-02')  # trump
-    print('v2 vaut : ', v)
+    for date in [None, '2012-02']:
+        res = manager.search_politician_party('Q22686', date)  # trump
+        print(f'Information on Trump\'s parties after \'{date}\': \'{res}\'')
 
-    v = manager.search_party_information("Republican Party")
-    print('s vaut: ', v)
 
-    v = manager.search_party_information("Democratic Party")
-    print('t vaut: ', v)
+    res = manager.search_politician_party('Q529090', '2008-10')  # Bill Pascrell
+    print(f'Information on Bill\'s party after \'2008-10\': \'{res}\'')
+
+    for date in [None, '1984-02']:
+        res = manager.search_politician_party('Q260464', date)  # Ed Balls
+        print(f'Information on Ed\'s party after \'{date}\': \'{res}\'')
 
 
 if __name__ == '__main__':
