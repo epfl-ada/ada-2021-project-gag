@@ -4,5 +4,8 @@
 out*
 quotebank
 
+.idea
+wikidata/**/__pycache__/*
+
 *.csv
 *.json
