@@ -157,7 +157,11 @@ class QueryManager:
         def wiki_date_to_time_date(date_ws: str) -> datetime.date:
             """Turns a wikidata date (str) into a datetime.date"""
             time_list: List[str] = date_ws[1:].split('-')
-            return datetime.date(int(time_list[0]), int(time_list[1]), 1)
+
+            year: str = time_list[0] if int(time_list[0]) >= 0 else '0'
+            month: str = time_list[1] if int(time_list[1]) in range(1, 13) else '01'
+
+            return datetime.date(int(year), int(month), 1)
 
         parties = list()
         try:
@@ -217,6 +221,10 @@ def main():
 
     res = manager.search_politician_party('Q529090', '2008-10')  # Bill Pascrell
     print(f'Information on Bill\'s party after \'2008-10\': \'{res}\'')
+
+    for date in [None, '2010-10', '1989-10', '1900-01']:
+        res = manager.search_politician_party('Q567', date)  # Angela Merkel
+        print(f'Information on Angela\'s party after \'{date}\': \'{res}\'')
 
     for date in [None, '1984-02']:
         res = manager.search_politician_party('Q260464', date)  # Ed Balls
