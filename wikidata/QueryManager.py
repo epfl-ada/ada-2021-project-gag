@@ -6,6 +6,8 @@ from typing import List, Dict
 from wikidata.model import Query, Queries
 from wikidata.model.JsonObject import JsonObject
 
+import wikidata.model.Cache as cache
+
 
 Qid = str
 
@@ -35,9 +37,15 @@ class QueryManager:
         """Inner class used to implement the singleton design pattern"""
 
         def __init__(self):
+            # TODO remove
+            self.got_online = 0
+            self.got_cache = 0
+
+
             self.session = requests.Session()
             self.country_map = dict()
             self.tendency_map = dict()
+            self.politician_map = cache.Cache(1)
 
     __instance = None  # Singleton QueryManager object
 
@@ -47,6 +55,10 @@ class QueryManager:
 
     def __getattr__(self, item):
         return getattr(self.__instance, item)
+
+
+    def stats_TODO_remove(self):
+        print(f"  - gotten from online: {self.got_online} vs gotten from cache {self.got_cache}")
 
     def fetch_qid_information(self, qid: Qid, pids: List[str] = None) -> Dict[Qid, List]:
         """
@@ -163,11 +175,21 @@ class QueryManager:
 
             return datetime.date(int(year), int(month), 1)
 
+
         parties = list()
-        try:
-            parties = self.fetch_qid_information(politician_qid)['claims']['P102']
-        except Exception:
-            pass
+        cached = self.politician_map.get(politician_qid)
+
+        if cached is not None:
+            parties = cached
+            self.got_cache += 1
+        else:
+            try:
+                parties = self.fetch_qid_information(politician_qid)['claims']['P102']
+                # self.politician_map[politician_qid] = parties
+                self.politician_map.add(politician_qid, parties)
+                self.got_online += 1
+            except Exception:
+                pass
 
         if len(parties) == 0:
             return ''
