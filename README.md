@@ -1,6 +1,6 @@
 # Influence of politics in sport media
 
-The [data story](https://mdulon.github.io/ADA_GaG_Datastory/) of this study is available by clicking the link or copy pasting thi URL : https://mdulon.github.io/ADA_GaG_Datastory/
+The [data story](https://mdulon.github.io/ADA_GaG_Datastory/) of this study is available by clicking the link or copy pasting this URL : https://mdulon.github.io/ADA_GaG_Datastory/
 
 ## Abstract
 
