@@ -52,7 +52,7 @@ The data is processed by chunks given their size to avoid reaching the memory li
 
 ## Organization within the team
 
-Each member was responsible for certain research questions and did both the notebook/code for it and the datastory about it. In addition, some members provided local support for specific tasks such building the webpage or the wikidata query function. We met regularly to discuss about our difficulties and coordinate each other work. In the end, the work was spread in this manner :
+Each member was responsible for certain research questions and did both the notebook/code for it and the datastory about it. In addition, some members provided local support for specific tasks such as building the webpage or the wikidata query function. We met regularly to discuss about our difficulties and coordinate each other work. In the end, most of the work was spread in this manner :
 
 - Nicolas : coded the query function for wikidata + study of the party + creation of the first preprocess to retrieve only sport quotes
 - Fracesca : worked on the study of speakers occupation and party
