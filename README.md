@@ -1,5 +1,6 @@
 # Influence of politics in sport media
 
+The [data story](https://mdulon.github.io/ADA_GaG_Datastory/) of this study is available by clicking the link or copy pasting thi URL : https://mdulon.github.io/ADA_GaG_Datastory/
 
 ## Abstract
 
@@ -49,41 +50,11 @@ The data is processed by chunks given their size to avoid reaching the memory li
   5. Display distribution by country of the political parties
 
 
-## Timeline
+## Organization within the team
 
-Until now the goal was to verify if this analysis was feasible by exploring the data and verifying that the methods work and that there is enough data. Now we will be able to properly start the analysis based on this inital work and integrate the feedback of this milestone. Afterwards, it will be necessary to interpret the results obtained. Finally, clean up and standardize the code and create the datastory. Here's thus our proposed timeline:
-  - *5 Nov to 12 Nov*: data preprocessing from task 1 to 4 + code to produce initial analysis data
-  - *12 Nov to 3 Dec*: data preprocessing from task 5 and 6 + code to produce analysis data
-  - *3 Dec to 10 Dec*: analysis data results interpretation + start the datastory 
-  - *10 Dec to 17 Dec*: clean up and standardize the code + finish the datastory
+Each member was responsible for certain research questions and did both the notebook/code for it and the datastory about it. In addition, some members provided local support for specific tasks such building the webpage or the wikidata query function. We met regularly to discuss about our difficulties and coordinate each other work. In the end, the work was spread in this manner :
 
-### Organization within the team
-
-  - *5 Nov to 12 Nov* 
-    - Data processing 1 and 2 : Etienne and Nicolas
-    - Data processing 3 and 4 : Maxime and Francesca
-
-  - *12 Nov to 3 Dec* 
-    - Data processing 5 and 6 : Maxime and Francesca
-    - Analysis 1, 2 and 3 : Etienne and Nicolas
-
-  - *3 Dec to 10 Dec*
-    - Data story and analysis : Etienne and Nicolas
-    - Analysis 4 and 5 : Maxime and Francesca
-
-  - *10 Dec to 17 Dec* 
-    - Data story and analysis : Maxime and Francesca
-    - Clean up, verifications, rereading : Etienne and Nicolas
-
-
-## Notebooks description
-
-  - [sports_quotes](sports_quotes.ipynb): Imports data from the Quotebank and extracts quotes from sport media and sports sections of more general media.
-  - [Sources](sources_2020.ipynb): Analysis of the distribution of the media publishing sports quotes.
-  - [Party_distribution](party_distribution): Import data from `speaker_attributes.parquet`. For each year, extract politicians which are speakers of sport quotes and their political parties. First analysis of the distribution of sport quotes over political parties. 
-
-
-## Questions for TAs
-
-We tried to stay very broad in the questions that we could ask ourselves, but we may have cited too many or some may be too difficult. Even though we have a pretty clear idea of what we want to do and how we want to do it, we though it was more interesting to put a bit more here so that you can give your feedback on all our ideas before we discard some. So we would like your opinion on which are the most interesting aspects to deal with.
-
+- Nicolas : coded the query function for wikidata + study of the party + creation of the first preprocess to retrieve only sport quotes
+- Fracesca : worked on the study of speakers occupation and party
+- Maxime : worked on the topic analysis + webpage creation
+- Etienne : worked on the media analysis and the time analysis
