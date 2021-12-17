@@ -15,6 +15,7 @@ To explore this subject the following questions can be assessed:
 - Which political parties or politicians are the most present in the sports quotes?
 - What is the distribution of the political tendency of the political parties present in the sports quotes (going from extreme right to extreme left)? 
 - What is the distribution of the political parties present for a specific country? 
+- What are the topics discussed by politicians in sport medias ?
 
 
 ## Additional datasets
